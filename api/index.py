@@ -61,12 +61,11 @@ def recommend_movies():
     data = request.get_json()
     movie = data['movie']
     recommendations = recommend_book(movie)
-    print(recommendations)
     return jsonify(recommendations)
 
 @app.route('/about')
 def about():
     return render_template('about.html')
-    
+
 if __name__ == "__main__":
     app.run(debug=True)
