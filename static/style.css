@@ -1,0 +1,152 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #313647;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease; 
+  border-bottom: 4px solid #000000;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  transform: scale(1.3);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #A3B087;
+  font-weight: bold;
+  transform: scale(1.3)
+}
+body{
+    background-color: #313647;
+}
+.intro{
+    color: #FFF8D4;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;      /* Moves cards to next row */
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.card {
+    width: 220px;
+    background: #40475b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,.3);
+}
+
+.container {
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+h2 {
+    color: #FFF8D4;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+h3 {
+    color: #DDD;
+    font-size: 15px;
+    margin: 0;
+}
+form {
+  width: clamp(320px, 70vw, 1300px);
+  padding: 50px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  border: 2px solid #F8E7C9;
+  border-radius: 14px;
+  background: #313647;
+  color: #F8E7C9;
+  font-size: 2rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+input[type="text"]::placeholder {
+  color: var(--muted-text);
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #F8E7C9;
+  background: #F8E7C9;
+  color: #0F3B3E;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  width: 100%;
+  max-width: 540px;
+  min-height: 60px;
+  padding: 0 20px;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background: #F8E7C9;
+  color: #313647;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color 0.2s ease, color 0.2s ease,
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background: #313647;
+  color: #F8E7C9;
+  border-color: #F8E7C9;
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+#ip-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
