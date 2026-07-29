@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Recommender System</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="topnav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="./recommend.html" class="active">Recommendation</a>
+    <a href="">Contact</a>
+</div>
+<div class="intro">
+    <h1>Recommendation Engine</h1>
+</div>
+<div id="ip-form">
+    <form id="book-form" action="" method="GET">
+        <input
+            type="text"
+            id="message-input"
+            name="message"
+            placeholder="Enter The Name Of Book"
+        >
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div id="result"></div>
+<script>
+    const form = document.getElementById('book-form');
+    const input = document.getElementById('message-input');
+    const resultEl = document.getElementById('result');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // stop the page from reloading
+
+    const movie = input.value.trim();
+    if (!movie) return;
+
+    try {
+        const response = await fetch('/recommend_movies', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                movie: movie
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error("Request failed");
+        }
+
+        const data = await response.json();
+        resultEl.innerHTML = `<div class="card-wrapper"></div>`;
+
+        const wrapper = resultEl.querySelector(".card-wrapper");
+
+        data.forEach(book => {
+            wrapper.innerHTML += `
+                <div class="card">
+                    <img src="${book[2]}" alt="${book[0]}" width="180" height="230">
+                    <div class="container">
+                        <h2>${book[0]}</h2>
+                        <h3>By: ${book[1]}</h3>
+                    </div>
+                </div>
+            `;
+        });
+    } catch (err) {
+        console.error(err);
+        resultEl.innerHTML = "<p>Something went wrong.</p>";
+    }
+});
+</script>    
+</body>
+</html>
