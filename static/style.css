@@ -150,3 +150,67 @@ button[type="submit"]:active {
     align-items: center;
     width: 100%;
 }
+footer{
+  color:#F8E7C9 ;
+  display: flex;
+  justify-content: center;
+}
+#about-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-section h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#about-section .intro {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.about-card h2 {
+    color: #1f4e79;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.about-card p {
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-card ul {
+    margin-left: 20px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.footer-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+p{
+  color: #F8E7C9;
+  font-size: 23px;
+}

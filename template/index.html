@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Book Recommender System</title>
-  <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
@@ -13,7 +12,7 @@
 <div class="topnav">
     <a href="{{ url_for('home') }}" class="active">Home</a>
     <a href="{{ url_for('recommend') }}">Recommendation</a>
-    <a href="">Contact</a>
+    <a href="{{ url_for('about') }}">About</a>
 </div>
 <div class="intro">
     <h1>Top 50 Books </h1>
@@ -34,5 +33,5 @@
     {% endfor %}
 </div>
 </body>
-
+<footer>Made with ❤️ By ak-junior</footer>
 </html>

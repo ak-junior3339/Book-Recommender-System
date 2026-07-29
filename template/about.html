@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Recommender System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="topnav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('recommend') }}">Recommendation</a>
+    <a href="{{ url_for('about') }}" class="active">About</a>
+</div>
+<div class="intro">
+    <h1>About Book Recommender</h1>
+</div>
+<section id="about-section">
+
+    <p>
+        Welcome to <strong>Book Recommender</strong>, a web application designed to
+        help readers discover books they'll love. Simply search for a book you've
+        enjoyed, and the system will recommend similar titles based on their content.
+    </p>
+
+    <div class="about-card">
+        <h2>What This Website Does</h2>
+        <p>
+            This recommendation system helps users find books that match their
+            interests by analyzing similarities between books. Instead of browsing
+            through thousands of titles, you can quickly discover books related to
+            your favorite reads.
+        </p>
+
+        <h2>How It Works</h2>
+        <p>
+            The recommendation engine is built using <strong>Machine Learning</strong>.
+            It uses Collabrative based recommendation approch and recommendations
+            are generated using <strong>cosine similarity</strong> to identify books
+            with similar content.
+        </p>
+
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>HTML, CSS & JavaScript</li>
+            <li>Pandas & NumPy</li>
+            <li>Scikit-learn</li>
+            <li>Pickle</li>
+            <li>etc.</li>
+        </ul>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Book title search with suggestions.</li>
+            <li>Collabrative-based book recommendations.</li>
+            <li>Book cover images and author information.</li>
+            <li>Simple, responsive, and user-friendly interface.</li>
+        </ul>
+
+        <p class="footer-text">
+            Thank you for visiting Book Recommender. Happy Reading! 📚
+        </p>
+    </div>
+</section>
+</body>
+<footer>Made with ❤️ By ak-junior</footer>
+</html>

@@ -51,6 +51,11 @@ def home():
 def recommend():
     return render_template('recommend.html')
 
+@app.route("/books_r")
+def books_r():
+    book_names = list(pt.index)
+    return jsonify(book_names)
+
 @app.route('/recommend_movies', methods=['POST'])
 def recommend_movies():
     data = request.get_json()
@@ -58,5 +63,10 @@ def recommend_movies():
     recommendations = recommend_book(movie)
     print(recommendations)
     return jsonify(recommendations)
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+    
 if __name__ == "__main__":
     app.run(debug=True)
