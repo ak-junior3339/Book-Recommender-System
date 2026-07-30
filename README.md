@@ -6,7 +6,7 @@ A Flask-based web application that recommends books to readers using **popularit
 
 
 
-**[Live Demo](#)** https://book-recommender-system-59w7.onrender.com
+**[Live Demo]** https://book-recommender-system-59w7.onrender.com
 
 </div>
 
@@ -40,7 +40,7 @@ The project covers the full ML application lifecycle: data cleaning and EDA, mod
 
 ---
 
-## 🎬 Demo
+##  Demo
 
 <div align="center">
 
@@ -67,12 +67,12 @@ The project covers the full ML application lifecycle: data cleaning and EDA, mod
 
 ## Features
 
-- 🏆 **Top 50 Books** — Homepage showcasing the most popular, highly-rated books.
-- 🔍 **Personalized Recommendations** — Enter any book title to get 10 similar recommendations powered by cosine similarity.
-- ⚡ **Live Search Suggestions** — Autocomplete dropdown populated from the trained book catalog.
-- 🖼️ **Rich Book Details** — Cover image, author, publication year, review count, and average rating for every book.
-- 📱 **Responsive UI** — Clean, lightweight interface built with HTML, CSS, and vanilla JavaScript — no heavy frontend framework required.
-- 🧩 **Simple REST API** — JSON endpoints that can be reused by any frontend or client.
+- **Top 50 Books** — Homepage showcasing the most popular, highly-rated books.
+- **Personalized Recommendations** — Enter any book title to get 10 similar recommendations powered by cosine similarity.
+- **Live Search Suggestions** — Autocomplete dropdown populated from the trained book catalog.
+- **Rich Book Details** — Cover image, author, publication year, review count, and average rating for every book.
+- **Responsive UI** — Clean, lightweight interface built with HTML, CSS, and vanilla JavaScript — no heavy frontend framework required.
+- **Simple REST API** — JSON endpoints that can be reused by any frontend or client.
 
 ---
 
