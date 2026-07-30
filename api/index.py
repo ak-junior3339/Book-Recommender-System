@@ -21,21 +21,24 @@ with open(os.path.join(BASE_DIR,'Models','similarity_score.pkl'),'rb') as f:
     similarity_score = pickle.load(f)
 
 def recommend_book(book_name) : 
-    # finding the index of book : 
-    index = np.where(pt.index == book_name)[0][0]
-    # Calculating the top 5 similar books excluding self.
-    similar_items = sorted(list(enumerate(similarity_score[index])),key = lambda x : x[1],reverse=True)[1:11]
-    data = []
-    # we will have a 2-D array and in each array we will have Name,Author and Poster link
-    for i in  similar_items:
-        item = []
-        temp_df = books[books['Book-Title'] == (pt.index[i[0]])]
-        item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Title'].values))
-        item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Author'].values))
-        item.extend(list(temp_df.drop_duplicates('Book-Title')['Image-URL-M'].values))
+    try :
+        # finding the index of book : 
+        index = np.where(pt.index == book_name)[0][0]
+        # Calculating the top 5 similar books excluding self.
+        similar_items = sorted(list(enumerate(similarity_score[index])),key = lambda x : x[1],reverse=True)[1:11]
+        data = []
+        # we will have a 2-D array and in each array we will have Name,Author and Poster link
+        for i in  similar_items:
+            item = []
+            temp_df = books[books['Book-Title'] == (pt.index[i[0]])]
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Title'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Book-Author'].values))
+            item.extend(list(temp_df.drop_duplicates('Book-Title')['Image-URL-M'].values))
 
-        data.append(item)
-    return data
+            data.append(item)
+        return data
+    except:
+        return None
 
 @app.route('/')
 def home():

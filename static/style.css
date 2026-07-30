@@ -214,3 +214,10 @@ p{
   color: #F8E7C9;
   font-size: 23px;
 }
+h4{
+  font-size: 50px;
+  font-weight: bold;
+  color: #F9E7C9;
+  display: flex;
+  justify-content: center;
+}
